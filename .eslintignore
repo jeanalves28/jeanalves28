@@ -1,0 +1,10 @@
+node_modules/
+next/
+.next/
+build/
+*.config.js
+*.config.ts
+*.test.js
+*.test.jsx
+*.test.ts
+*.test.tsx
