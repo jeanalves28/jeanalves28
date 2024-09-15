@@ -17,6 +17,11 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
+    env:
+      NEXT_PUBLIC_USER_EMAIL: ${{ secrets.E_MAIL_LOGIN }}
+      NEXT_PUBLIC_PASS_EMAIL: ${{ secrets.PASSWORD_LOGIN }}
+      NEXT_PUBLIC_RECEIVER_EMAIL: ${{ secrets.E_MAIL_RECEIVER }}
+
     steps:
       - name: Checkout 🛎️
         uses: actions/checkout@v4
