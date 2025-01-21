@@ -1,11 +1,11 @@
-import { Roboto } from 'next/font/google';
 import { type Metadata } from 'next';
+import { ProviderForm, ProviderTheme } from '../custom';
+import { mPlusRounded1c, sourceSans } from '../fonts';
 import '../styles/tailwind.css';
 
-const roboto = Roboto({ subsets: ['latin'], weight: '400' });
-
 export const metadata: Metadata = {
-	title: 'Portfolio',
+	title: 'Portfolio do Jean',
+	icons: 'man_technologist.ico',
 };
 
 export default function RootLayout({
@@ -15,7 +15,11 @@ export default function RootLayout({
 }) {
 	return (
 		<html lang="pt-br">
-			<body className={roboto.className}>{children}</body>
+			<body className={`${sourceSans.className} ${mPlusRounded1c.variable}`}>
+				<ProviderForm>
+					<ProviderTheme>{children}</ProviderTheme>
+				</ProviderForm>
+			</body>
 		</html>
 	);
 }
