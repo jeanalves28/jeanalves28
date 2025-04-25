@@ -1,3 +1,157 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+h1,
+h2,
+a,
+nav,
+label,
+span,
+p {
+  @apply transition-[color] delay-200 duration-200;
+}
+
+.bg-main {
+  @apply relative h-screen pt-16 transition-bg duration-200 before:absolute before:inset-0 before:z-0 before:h-[121vh] before:bg-[url('../../public/bg_dev.png')] before:bg-center before:bg-no-repeat before:opacity-[.03] before:content-[''] !important;
+}
+
+.bg-contact {
+  @apply relative h-screen before:absolute before:inset-0 before:z-0 before:h-[122vh] before:bg-cover before:bg-no-repeat before:opacity-40 before:content-[''] before:max-laptop:h-[125vh] before:max-desktop:h-[130vh] before:max-ipad:h-[125vh] !important;
+}
+
+.bg-image-contact-system {
+  @apply before:bg-[url('../../public/bg_contact.jpg')] dark:before:bg-[url('../../public/bg_contact_dark.jpg')] dark:before:opacity-100 !important;
+}
+
+.bg-image-contact-light {
+  @apply before:bg-[url('../../public/bg_contact.jpg')] !important;
+}
+
+.bg-image-contact-dark {
+  @apply before:bg-[url('../../public/bg_contact_dark.jpg')] before:opacity-100 !important;
+}
+
+.container-modal {
+  @apply animate-grow-container flex h-[15rem] w-[20rem] flex-col items-center justify-end gap-y-13 rounded-md bg-neutral-50 p-8 text-inherit;
+}
+
+.bg-color-container-system {
+  @apply border border-neutral-50 bg-neutral-50 text-slate-600 dark:bg-black-theme dark:text-ghost-white;
+}
+
+.bg-color-container-dark {
+  @apply border bg-black-theme text-ghost-white;
+}
+
+.bg-color-container-light {
+  @apply border border-neutral-50 bg-neutral-50 text-slate-600;
+}
+
+.bg-modal {
+  @apply absolute inset-0 z-3 h-[122vh] animate-fading-bg-black max-laptop:h-[125vh] max-desktop:h-[130vh] max-ipad:h-[125vh] !important;
+}
+
+.bg-color-system {
+  @apply bg-blue-50 dark:bg-neutral-950;
+}
+
+.bg-color-light {
+  @apply bg-blue-50;
+}
+
+.bg-color-dark {
+  @apply bg-neutral-950;
+}
+
+.text-color-system {
+  @apply text-slate-600 dark:text-ghost-white;
+}
+
+.text-color-light {
+  @apply text-slate-600;
+}
+
+.text-color-dark {
+  @apply text-ghost-white;
+}
+
+.border-color-system {
+  @apply border-gray-400 dark:border-neutral-500;
+}
+
+.border-color-light {
+  @apply border-gray-400;
+}
+
+.border-color-dark {
+  @apply border-neutral-500;
+}
+
+.border-profile-system {
+  @apply border-white dark:border-ghost-white;
+}
+
+.border-profile-light {
+  @apply border-white;
+}
+
+.border-profile-dark {
+  @apply border-ghost-white;
+}
+
+.title-header {
+  @apply select-none text-xl transition-[color] duration-300;
+}
+
+.title-header-theme-system {
+  @apply text-slate-600 hover:text-slate-500 dark:text-ghost-white dark:hover:text-stone-200;
+}
+
+.title-header-theme-dark {
+  @apply text-ghost-white hover:text-stone-200;
+}
+
+.title-header-theme-light {
+  @apply text-slate-600 hover:text-slate-500;
+}
+
+.btn-theme {
+  @apply h-full w-full px-2 py-1;
+}
+
+.btn-deactivated {
+  @apply flex h-11 w-14 items-center justify-center rounded-xl border-2 transition-[box-shadow,_border-color] duration-300;
+}
+
+.btn-actived-theme-light {
+  @apply flex h-11 w-14 items-center justify-center rounded-xl border-2 border-blue-btn-theme shadow-blur-btn-theme transition-[box-shadow,_border-color] duration-300 active:shadow-blur-btn-active-theme !important;
+}
+
+.btn-actived-theme-dark {
+  @apply flex h-11 w-14 items-center justify-center rounded-xl border-2 border-blue-btn-theme shadow-blur-btn-theme-dark transition-[box-shadow,_border-color] duration-300 active:shadow-blur-btn-active-theme-dark !important;
+}
+
+.btn-actived-theme-system {
+  @apply flex h-11 w-14 items-center justify-center rounded-xl border-2 border-blue-btn-theme shadow-blur-btn-theme transition-[box-shadow,_border-color] duration-300 active:shadow-blur-btn-active-theme dark:shadow-blur-btn-theme-dark dark:active:shadow-blur-btn-active-theme-dark !important;
+}
+
+.btn-forced-dark {
+  @apply border-ghost-white bg-black-theme hover:border-blue-btn-theme hover:shadow-blur-btn-theme-dark active:shadow-blur-btn-active-theme-dark;
+}
+
+.btn-forced-light {
+  @apply border-slate-400 bg-white hover:border-blue-btn-theme hover:shadow-blur-btn-theme active:shadow-blur-btn-active-theme;
+}
+
+.btn-system-theme {
+  @apply border-slate-400 bg-white hover:border-blue-btn-theme hover:shadow-blur-btn-theme active:shadow-blur-btn-active-theme dark:border-ghost-white dark:bg-black-theme dark:hover:shadow-blur-btn-theme-dark dark:active:shadow-blur-btn-active-theme-dark;
+}
+
+.input-blue-theme-system {
+  @apply dark:focus:border-blue-btn-theme dark:focus:shadow-input-blue-theme-dark !important;
+}
+
+.input-blue-theme-dark {
+  @apply focus:border-blue-btn-theme focus:shadow-input-blue-theme-dark !important;
+}

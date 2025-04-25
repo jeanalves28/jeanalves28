@@ -9,8 +9,10 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "autoprefixer": "^10",
     "next": "14.0.2",
+    "node": "^20.18.1",
     "postcss": "^8",
     "react": "^18",
     "react-dom": "^18",
@@ -29,6 +31,11 @@
     "eslint-config-next": "14.0.2",
     "eslint-config-prettier": "^9",
     "prettier": "^3",
-    "prettier-plugin-tailwindcss": "^0"
+    "prettier-plugin-tailwindcss": "^0",
+    "stylelint": "^16.9.0",
+    "stylelint-config-standard": "^36.0.1",
+    "stylelint-config-standard-scss": "^13.1.0",
+    "stylelint-order": "^6.0.4",
+    "stylelint-scss": "^6.5.1"
   }
 }

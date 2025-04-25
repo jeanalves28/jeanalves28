@@ -1,7 +1,9 @@
 # 👋🏽 Olá, sou Jean
 
-atualmente sou formado pela [Trybe](https://github.com/betrybe) em
-desenvolvimento Web Full Stack
+<div align="center">
+  <p>Atualmente sou formado pela <a href="https://github.com/betrybe">Trybe</a> em desenvolvimento Web Full Stack.</p>
+  <p>veja meu portfolio <a href="https://jeanalves28.github.io/jeanalves28/">aqui</a>.</p>
+</div>
 
 ## 👨🏽‍💻 Stacks
 
