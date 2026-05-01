@@ -1,0 +1,105 @@
+@theme {
+  --font-mPlusRounded1c: var(--font-m-plus-rounded-1c);
+  --color-ghost-white: #f8f8ff;
+  --color-black-theme: #0d1117;
+  --spacing-13: 3.5rem;
+  --delay-appearance-container: 0.2s;
+  --breakpoint-desktop: 1000px;
+  --breakpoint-laptop: 900px;
+  --breakpoint-ipad: 1025px;
+
+  --animate-translate-open: opacity-transition-open 0.15s both ease-out;
+  @keyframes opacity-transition-open {
+    from {
+      opacity: 0;
+      transform: translateY(-0.5rem);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  --animate-translate-close: opacity-transition-close 0.15s both ease-in;
+  @keyframes opacity-transition-close {
+    from {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    to {
+      opacity: 0;
+      transform: translateY(-0.5rem);
+    }
+  }
+
+  --animate-fading-close: fading-close 0.15s linear;
+  @keyframes fading-close {
+    from {
+      opacity: 1;
+    }
+
+    to {
+      opacity: 0;
+    }
+  }
+
+  --animate-fading-open: fading-open 0.75s calc(2 * 0.95s) backwards ease-out;
+  --animate-appearancing-up-container-1: fading-open 0.9s
+    var(--delay-appearance-container) backwards ease-out;
+  --animate-appearancing-up-container-2: fading-open 0.9s
+    calc(2 * var(--delay-appearance-container)) backwards ease-out;
+  --animate-appearancing-up-container-3: fading-open 0.9s
+    calc(3 * var(--delay-appearance-container)) backwards ease-out;
+  --animate-appearancing-up-container-4: fading-open 0.9s
+    calc(4 * var(--delay-appearance-container)) backwards ease-out;
+  --animate-appearancing-up-container-5: fading-open 0.9s
+    calc(5 * var(--delay-appearance-container)) backwards ease-out;
+  @keyframes fading-open {
+    from {
+      opacity: 0;
+      transform: translateY(3rem);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  --animate-fading-simple: fading-simple 0.5s backwards linear;
+  @keyframes fading-simple {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  --animate-fading-bg-black: fading-black-transparent 0.5s both linear;
+  @keyframes fading-black-transparent {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      background-color: rgba(0, 0, 0, 0.3);
+    }
+  }
+
+  --animate-grow-container: grow-container 0.2s 0.5s both ease-out;
+  @keyframes grow-container {
+    from {
+      opacity: 0;
+      transform: scale(0.9, 0.9);
+    }
+
+    to {
+      opacity: 1;
+      transform: scale(1, 1);
+    }
+  }
+}

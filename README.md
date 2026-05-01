@@ -1,7 +1,9 @@
 # 👋🏽 Olá, sou Jean
 
-atualmente sou formado pela [Trybe](https://github.com/betrybe) em
-desenvolvimento Web Full Stack
+<div align="center">
+  <p>Atualmente sou formado pela <a href="https://github.com/betrybe">Trybe</a> em desenvolvimento Web Full Stack.</p>
+  <p>veja meu portfolio <a href="https://jeanalves28.github.io/jeanalves28/">aqui</a>.</p>
+</div>
 
 ## 👨🏽‍💻 Stacks
 
@@ -9,18 +11,19 @@ desenvolvimento Web Full Stack
 [<img width="50" height="40" alt="Typescript" src="https://github.com/jeanalves28/jeanalves28/blob/main/images/typescript.svg" />](https://www.typescriptlang.org)
 [<img width="50" height="40" alt="Javascript" src="https://github.com/jeanalves28/jeanalves28/blob/main/images/javascript.svg" />](https://www.javascript.com)
 [<img width="50" height="40" alt="React" src="https://github.com/jeanalves28/jeanalves28/blob/main/images/react.svg" />](https://react.dev)
+[<img width="50" height="40" alt="React Testing Library" src="https://github.com/jeanalves28/jeanalves28/blob/main/images/react_testing_library.svg">](https://testing-library.com/docs/react-testing-library/intro)
 [<img width="50" height="40" alt="Redux" src="https://github.com/jeanalves28/jeanalves28/blob/main/images/redux.svg" />](https://redux.js.org)
 [<img width="50" height="45" alt="NodeJS" src="https://github.com/jeanalves28/jeanalves28/blob/main/images/nodejs.svg" />](https://nodejs.org)
 [<img width="50" height="45" alt="Sequelize" src="https://github.com/jeanalves28/jeanalves28/blob/main/images/sequelize.svg" />](https://sequelize.org)
 [<img width="50" height="40" alt="Jest" src="https://github.com/jeanalves28/jeanalves28/blob/main/images/jest.svg" />](https://jestjs.io)
 [<img width="50" height="40" alt="Mocha" src="https://github.com/jeanalves28/jeanalves28/blob/main/images/mocha.svg" />](https://mochajs.org)
-[<img width="50" height="45" alt="MySQL" src="https://github.com/jeanalves28/jeanalves28/blob/main/images/mysql.svg" />](https://www.mysql.com)
+[<img width="50" height="45" alt="MySQL" src="https://github.com/jeanalves28/jeanalves28/blob/main/images/mysql.svg" />](https://www.w3schools.com/sql/default.asp)
 [<img width="50" height="40" alt="NextJS" src="https://github.com/jeanalves28/jeanalves28/blob/main/images/nextjs.svg" />](https://nextjs.org)
 [<img width="50" height="45" alt="Python" src="https://github.com/jeanalves28/jeanalves28/blob/main/images/python.svg" />](https://www.python.org)
 [<img width="50" height="45" alt="Java" src="https://github.com/jeanalves28/jeanalves28/blob/main/images/java.svg" />](https://www.java.com)
 [<img width="50" height="40" alt="Java Spring" src="https://github.com/jeanalves28/jeanalves28/blob/main/images/java_spring.svg" />](https://spring.io)
 [<img width="50" height="45" alt="Maven" src="https://github.com/jeanalves28/jeanalves28/blob/main/images/maven.svg" />](https://maven.apache.org)
-[<img width="50" height="40" alt="Docker" src="https://github.com/jeanalves28/jeanalves28/blob/main/images/docker.svg" />](https://www.docker.com)
+[<img width="50" height="40" alt="SQL" src="https://github.com/jeanalves28/jeanalves28/blob/main/images/sql.svg" />](https://www.docker.com)
 [<img width="50" height="40" alt="HTML5" src="https://github.com/jeanalves28/jeanalves28/blob/main/images/html5.svg" />](https://developer.mozilla.org/en-US/docs/Web/HTML)
 [<img width="50" height="40" alt="CSS3" src="https://github.com/jeanalves28/jeanalves28/blob/main/images/css3.svg" />](https://developer.mozilla.org/en-US/docs/Web/CSS)
 [<img width="50" height="40" alt="Sass" src="https://github.com/jeanalves28/jeanalves28/blob/main/images/sass.svg" />](https://sass-lang.com)

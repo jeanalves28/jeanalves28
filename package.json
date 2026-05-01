@@ -1,5 +1,5 @@
 {
-  "name": "frontend",
+  "name": "jeanalves28",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,26 +9,32 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "autoprefixer": "^10",
-    "next": "14.0.2",
+    "@emailjs/browser": "^4",
+    "@tailwindcss/postcss": "^4",
+    "next": "^16",
     "postcss": "^8",
-    "react": "^18",
-    "react-dom": "^18",
+    "react": "^19",
+    "react-dom": "^19",
     "sass": "^1",
-    "tailwindcss": "^3",
-    "typescript": "^5"
+    "tailwindcss": "^4",
+    "typescript": "^6"
   },
   "devDependencies": {
-    "@stylistic/eslint-plugin": "^1",
-    "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
-    "@typescript-eslint/eslint-plugin": "^6",
-    "@typescript-eslint/parser": "^6",
-    "eslint": "^8",
-    "eslint-config-next": "14.0.2",
-    "eslint-config-prettier": "^9",
+    "@eslint/js": "^10",
+    "@stylistic/eslint-plugin": "^5",
+    "@types/node": "^25",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^10",
     "prettier": "^3",
-    "prettier-plugin-tailwindcss": "^0"
+    "stylelint": "^17",
+    "stylelint-config-recommended": "^18",
+    "stylelint-config-recommended-scss": "^17",
+    "stylelint-config-standard": "^40",
+    "stylelint-config-standard-scss": "^17",
+    "stylelint-config-tailwindcss": "^1",
+    "stylelint-order": "^8",
+    "stylelint-scss": "^7",
+    "typescript-eslint": "^8"
   }
 }
