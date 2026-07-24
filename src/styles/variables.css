@@ -1,0 +1,156 @@
+@theme {
+  --font-display: var(--font-ubuntu-mono), var(--font-source-sans-3);
+  --font-title: var(--font-m-plus-rounded-1c);
+  --color-ghost-white: #f8f8ff;
+  --color-black-theme: #0d1117;
+  --color-black-card: #1f1f1f;
+  --color-black-form: #292a2c;
+  --color-black-input: #242424;
+  --transition-property-btn-theme: box-shadow, border;
+  --transition-property-bg-color: background-color;
+  --transition-property-color: color;
+  --transition-property-translate: translate;
+  --shadow-btn-theme:
+    0 0 0.5rem 0.05rem
+    var(--tw-shadow-color, rgb(0 0 0 / 0.1));
+  --shadow-btn-active-theme:
+    0 0 0.5rem 0.25rem
+    var(--tw-shadow-color, rgb(0 0 0 / 0.1));
+  --shadow-btn-theme-dark:
+    0 0 0.5rem 0.22rem
+    var(--tw-shadow-color, rgb(253 253 253 / 0.25));
+  --shadow-btn-active-theme-dark:
+    0 0 0.5rem 0.38rem
+    var(--tw-shadow-color, rgb(253 253 253 / 0.25));
+  --spacing-13: 3.5rem;
+  --delay-appearance-container: 0.2s;
+  --breakpoint-smartphone: 6.25rem;
+  --breakpoint-md: 54.6875rem;
+  --breakpoint-laptop: 1200px;
+  --animate-translate-open: opacity-transition-open 0.15s both ease-out;
+  @keyframes opacity-transition-open {
+
+    from {
+      opacity: 0;
+      transform: translateY(-0.5rem);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  --animate-translate-close: opacity-transition-close 0.15s both ease-in;
+  @keyframes opacity-transition-close {
+
+    from {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    to {
+      opacity: 0;
+      transform: translateY(-0.5rem);
+    }
+  }
+  --animate-diagonal-open: emerging-diagonal-bottom 0.15s both ease-out;
+  @keyframes emerging-diagonal-bottom {
+
+    from {
+      opacity: 0;
+      transform: translate(-3px, -3px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translate(0, 0);
+    }
+  }
+  --animate-diagonal-close: fading-diagonal-top 0.15s both ease-in;
+  @keyframes fading-diagonal-top {
+
+    from {
+      opacity: 1;
+      transform: translate(0, 0);
+    }
+
+    to {
+      opacity: 0;
+      transform: translate(-3px, -3px);
+    }
+  }
+  --animate-fading-close: fading-close 0.15s linear forwards;
+  @keyframes fading-close {
+
+    from {
+      opacity: 1;
+    }
+
+    to {
+      opacity: 0;
+    }
+  }
+  --animate-fading-open: fading-open 0.75s calc(2 * 0.95s) backwards ease-out;
+  --animate-appearing-up-container-1:
+    fading-open 0.9s
+    var(--delay-appearance-container) backwards ease-out;
+  --animate-appearing-up-container-2:
+    fading-open 0.9s
+    calc(2 * var(--delay-appearance-container)) backwards ease-out;
+  --animate-appearing-up-container-3:
+    fading-open 0.9s
+    calc(3 * var(--delay-appearance-container)) backwards ease-out;
+  --animate-appearing-up-container-4:
+    fading-open 0.9s
+    calc(4 * var(--delay-appearance-container)) backwards ease-out;
+  --animate-appearing-up-container-5:
+    fading-open 0.9s
+    calc(5 * var(--delay-appearance-container)) backwards ease-out;
+  @keyframes fading-open {
+
+    from {
+      opacity: 0;
+      transform: translateY(3rem);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  --animate-fading-simple: fading-simple 0.5s both linear;
+  @keyframes fading-simple {
+
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+  --animate-fading-bg-black: emerging-bg-black-transparent 0.5s both linear;
+  @keyframes emerging-bg-black-transparent {
+
+    from {
+      background-color: transparent;
+    }
+
+    to {
+      background-color: rgb(0 0 0 / 0.7);
+    }
+  }
+  --animate-grow-modal: grow-modal 0.1s 0.5s both ease-out;
+  @keyframes grow-modal {
+
+    from {
+      opacity: 0;
+      transform: scale(0.9, 0.9);
+    }
+
+    to {
+      opacity: 1;
+      transform: scale(1, 1);
+    }
+  }
+}

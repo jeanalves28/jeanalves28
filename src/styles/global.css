@@ -1,0 +1,180 @@
+@import "tailwindcss";
+@import "./variables.css";
+@import "./variants.css";
+
+html,
+body {
+  @apply font-display overflow-x-hidden overflow-y-auto;
+}
+
+.bg-wallpaper-main {
+  @apply relative transition-bg-color min-h-screen duration-200
+    before:fixed before:w-full before:h-full inset-0 before:z-1
+    before:bg-[url("../../public/merged.png")] before:bg-center
+    before:bg-repeat-y before:opacity-[0.05] before:lg:bg-size-[50%]
+    before:laptop:bg-size-[40%] before:smartphone:bg-size-[70%];
+}
+
+.bg-wallpaper-contact {
+  @apply relative min-h-screen before:absolute before:w-full
+    before:h-full before:inset-0 before:z-0 before:bg-cover
+    before:bg-no-repeat before:content-[""];
+}
+
+.bg-image-contact-system {
+  @apply before:bg-[url("../../public/bg_contact.jpg")]
+    dark:before:bg-[url("../../public/bg_contact_dark.jpg")]
+    before:opacity-60 dark:before:opacity-100;
+}
+
+.bg-image-contact-light {
+  @apply before:bg-[url("../../public/bg_contact.jpg")] before:opacity-60;
+}
+
+.bg-image-contact-dark {
+  @apply before:bg-[url("../../public/bg_contact_dark.jpg")] before:opacity-100;
+}
+
+.bg-color-system {
+  @apply bg-olive-100 dark:bg-neutral-950;
+}
+
+.bg-color-light {
+  @apply bg-olive-100;
+}
+
+.bg-color-dark {
+  @apply bg-neutral-950;
+}
+
+.bg-color-system-form {
+  @apply border border-slate-300 bg-neutral-50 text-slate-600
+    dark:border-neutral-600 dark:bg-black-form dark:text-ghost-white dark:shadow-neutral-900;
+}
+
+.bg-color-dark-form {
+  @apply border bg-black-form text-ghost-white border-neutral-600 shadow-neutral-900;
+}
+
+.bg-color-light-form {
+  @apply border border-slate-300 bg-neutral-50 text-slate-600;
+}
+
+.bg-color-system-card {
+  @apply bg-neutral-100 border border-slate-300 dark:border-zinc-700
+    dark:bg-black-card dark:hover:shadow-neutral-600
+    max-md:shadow-2xl dark:shadow-neutral-600;
+}
+
+.bg-color-dark-card {
+  @apply bg-black-card border border-zinc-700
+    md:hover:shadow-neutral-600 max-md:shadow-2xl max-md:shadow-neutral-600;
+}
+
+.bg-color-light-card {
+  @apply bg-neutral-100 border border-slate-300 max-md:shadow-2xl;
+}
+
+.bg-color-modal-system {
+  @apply bg-neutral-100 border-2 bg-radial-[at_55%_60%]
+    from-white to-blue-100 border-mist-500
+    dark:from-neutral-800/90 dark:to-black-card dark:border-zinc-700;
+}
+
+.bg-color-modal-dark {
+  @apply bg-black-card border-2 bg-radial-[at_55%_60%]
+    to-black-card from-neutral-800/90 border-zinc-700;
+}
+
+.bg-color-modal-light {
+  @apply bg-neutral-100 border-2 bg-radial-[at_55%_60%]
+    from-white to-blue-100 border-mist-500;
+}
+
+.text-color-system {
+  @apply text-slate-600 dark:text-ghost-white;
+}
+
+.text-color-light {
+  @apply text-slate-600;
+}
+
+.text-color-dark {
+  @apply text-ghost-white;
+}
+
+.border-color-system {
+  @apply border-gray-400 dark:border-neutral-500;
+}
+
+.border-color-light {
+  @apply border-gray-400;
+}
+
+.border-color-dark {
+  @apply border-neutral-500;
+}
+
+.border-profile-system {
+  @apply border-white dark:border-ghost-white;
+}
+
+.border-profile-light {
+  @apply border-white;
+}
+
+.border-profile-dark {
+  @apply border-ghost-white;
+}
+
+.nav-dropdown {
+  @apply absolute left-0 top-12 flex flex-col border rounded-md w-max;
+}
+
+#nav-menu-dropdown > :first-child {
+  @apply rounded-t-md;
+}
+
+#nav-menu-dropdown > :last-child {
+  @apply rounded-b-md;
+}
+
+.title-header {
+  @apply select-none text-xl transition-color duration-300;
+}
+
+.title-header-theme-system {
+  @apply text-slate-600 hover:text-slate-500 dark:text-ghost-white dark:hover:text-stone-200;
+}
+
+.title-header-theme-dark {
+  @apply text-ghost-white hover:text-stone-200;
+}
+
+.title-header-theme-light {
+  @apply text-slate-600 hover:text-slate-500;
+}
+
+.btn-theme {
+  @apply h-full w-full px-2 py-1;
+}
+
+.btn-theme-system {
+  @apply border-slate-400 bg-olive-100
+    transition-btn-theme duration-300
+    hover:border-cyan-400/90 hover:shadow-btn-theme hover:shadow-cyan-300 active:shadow-btn-active-theme
+    dark:hover:shadow-btn-theme-dark dark:hover:border-cyan-300
+    dark:hover:shadow-cyan-400 dark:bg-neutral-950 dark:border-ghost-white
+    dark:active:shadow-btn-active-theme-dark;
+}
+
+.btn-theme-dark {
+  @apply border-ghost-white bg-neutral-950
+    transition-btn-theme duration-300 hover:shadow-btn-theme-dark hover:border-cyan-300
+    hover:shadow-cyan-400 active:shadow-btn-active-theme-dark;
+}
+
+.btn-theme-light {
+  @apply border-slate-400 bg-olive-100 transition-btn-theme hover:border-cyan-400/90
+    hover:shadow-btn-theme hover:shadow-cyan-300 active:shadow-btn-active-theme;
+}

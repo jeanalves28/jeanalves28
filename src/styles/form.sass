@@ -1,18 +1,13 @@
 /* <========= Container =========> */
 
-$bg-color: #ffffff
-$font-color-black: #000000
-$font-color-white: #ffffff
-$font-color-form: #212529
-$border-color-input: #dee2e6
+$bg-color-light: #ffffff
+$bg-color-dark: #242424
+$font-color-dark: #45556c
+$font-color-light: #f8f8ff
+$border-color-input-light: #dee2e6
+$border-color-input-dark: #525252
 $border-thickness: 1px
 $rounded: 0.375rem
-$input-width: 100%
-$input-height: 3rem
-$button-width: 100%
-$button-height: 3rem
-$radio-width: 1rem
-$radio-height: 1rem
 
 /* <======== Colors =========> */
 
@@ -49,54 +44,64 @@ $light-border-hover: #c6c7c8
 $light-border-active: #babbbc
 $light-shadow-rgba: rgba(211, 212, 213, .5)
 
-$blue-light: #86b7fe
-$blue-shadow: rgba(13, 110, 253, 0.25)
+$input-blue-light: #86b7fe
+$input-blue-light-shadow: rgba(13, 110, 253, 0.25)
+$input-blue-dark: #3f6fff
+$input-blue-dark-shadow: rgba(63, 111, 255, 0.4)
 $green-light: #86fe9a
 $green-shadow: rgba(13, 253, 121, 0.25)
 $red-light: #fe8686
+$input-red-dark: #ff3f3f
+$input-red-dark-shadow: rgba(255, 45, 45, 0.4)
 $red-shadow: rgba(253, 13, 13, 0.25)
 $orange-light: #fee286
 $orange-shadow: rgba(253, 217, 13, 0.25)
 $yellow-light: #fefc86
 $yellow-shadow: rgba(249, 253, 13, 0.25)
 
-@mixin input($color-primary, $color-focus)
-	color: $font-color-form
-	background-color: $bg-color
+@mixin input-default
+	background-clip: padding-box
+	border-radius: $rounded
 	display: block
-	width: $input-width
-	height: 3rem
 	padding: 0.375rem 0.75rem
-	font-size: 1rem
-	font-weight: 400
-	line-height: 1.5
+	transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out
 	-webkit-appearance: none
 	-moz-appearance: none
 	appearance: none
 	outline: none
-	background-clip: padding-box
-	border: $border-thickness solid $border-color-input
-	border-radius: $rounded
-	transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out
 
 	&::placeholder
 		font-size: 11pt
 		font-style: italic
 		color: rgb(165, 165, 165)
 
+@mixin input-light($color-primary, $color-focus)
+	@include input-default
+	color: $font-color-dark
+	background-color: $bg-color-light
+	border: $border-thickness solid $border-color-input-light
+
 	&:focus
 		border-color: $color-primary
-		box-shadow: 0 0 0 0.25rem $color-focus
+		box-shadow: 0 0 0.1rem 0.25rem $color-focus
+
+@mixin input-dark($color-primary, $color-focus)
+	@include input-default
+	color: $font-color-light
+	background-color: $bg-color-dark
+	border: $border-thickness solid $border-color-input-dark
+
+	&:focus
+		border-color: $color-primary
+		box-shadow: 0 0 0.1rem 0.25rem $color-focus
 
 @mixin radio
 	display: block
-	width: $radio-width
-	height: $radio-height
 	-webkit-appearance: none
 	-moz-appearance: none
 	appearance: none
 	outline: none
-	border: 1px solid $border-color-input
+	border: 1px solid $border-color-input-light
 	border-radius: 50%
 	transition: border .15s ease-in-out, background-color .15s ease-in-out, box-shadow .15s ease-in-out
 
@@ -107,21 +112,17 @@ $yellow-shadow: rgba(249, 253, 13, 0.25)
 	&:focus
 		background-color: white
 		border: 5px solid $blue
-		box-shadow: 0 0 0 0.25rem $blue-shadow
+		box-shadow: 0 0 0 0.25rem $input-blue-light-shadow
 
 	&:focus-visible
 		outline: 2px solid $blue
-		box-shadow: 0 0 0 0.15rem $blue-shadow
+		box-shadow: 0 0 0 0.15rem $input-blue-light-shadow
 		outline-offset: 4px
 
 @mixin button
 	display: block
-	width: $button-width
-	height: $button-height
 	cursor: pointer
 	padding: 0.375rem 0.75rem
-	font-size: 1rem
-	font-weight: 400
 	-webkit-appearance: none
 	-moz-appearance: none
 	appearance: none
@@ -188,58 +189,73 @@ $yellow-shadow: rgba(249, 253, 13, 0.25)
 		border-color: $color-disabled
 		opacity: 0.65
 
-label
-	color: $font-color-form
-
 .input-blue
-	@include input($blue-light, $blue-shadow)
+	@include input-light($input-blue-light, $input-blue-light-shadow)
+
+.input-blue-dark
+	@include input-dark($input-blue-dark, $input-blue-dark-shadow)
+
+.input-blue-system
+	@include input-light($input-blue-light, $input-blue-light-shadow)
+
+	@media (prefers-color-scheme: dark)
+		@include input-dark($input-blue-dark, $input-blue-dark-shadow)
 
 .input-red
-	@include input($red-light, $red-shadow)
+	@include input-light($red-light, $red-shadow)
+
+.input-red-dark
+	@include input-dark($input-red-dark, $input-red-dark-shadow)
+
+.input-red-system
+	@include input-light($red-light, $red-shadow)
+
+	@media (prefers-color-scheme: dark)
+		@include input-dark($input-red-dark, $input-red-dark-shadow)
 
 .input-green
-	@include input($green-light, $green-shadow)
+	@include input-light($green-light, $green-shadow)
 
 .input-orange
-	@include input($orange-light, $orange-shadow)
+	@include input-light($orange-light, $orange-shadow)
 
 .input-yellow
-	@include input($yellow-light, $yellow-shadow)
+	@include input-light($yellow-light, $yellow-shadow)
 
 .btn-blue
-	@include button-default($blue, $font-color-white, $blue-hover, $blue-border-hover, $blue-border-hover, $blue-border-active, $blue, $blue-shadow-rgba)
+	@include button-default($blue, $font-color-light, $blue-hover, $blue-border-hover, $blue-border-hover, $blue-border-active, $blue, $blue-shadow-rgba)
 
 .btn-outline-blue
-	@include button-outline($blue, $font-color-white, $blue-hover, $blue, $blue-shadow-rgba)
+	@include button-outline($blue, $font-color-light, $blue-hover, $blue, $blue-shadow-rgba)
 
 .btn-green
-	@include button-default($green, $font-color-white, $green-hover, $green-border-hover, $green-border-hover, $green-border-active, $green, $green-shadow-rgba)
+	@include button-default($green, $font-color-light, $green-hover, $green-border-hover, $green-border-hover, $green-border-active, $green, $green-shadow-rgba)
 
 .btn-outline-green
-	@include button-outline($green, $font-color-white, $green-hover, $green, $green-shadow-rgba)
+	@include button-outline($green, $font-color-light, $green-hover, $green, $green-shadow-rgba)
 
 .btn-red
-	@include button-default($red, $font-color-white, $red-hover, $red-border-hover, $red-border-hover, $red-border-active, $red, $red-shadow-rgba)
+	@include button-default($red, $font-color-light, $red-hover, $red-border-hover, $red-border-hover, $red-border-active, $red, $red-shadow-rgba)
 
 .btn-outline-red
-	@include button-outline($red, $font-color-white, $red-hover, $red, $red-shadow-rgba)
+	@include button-outline($red, $font-color-light, $red-hover, $red, $red-shadow-rgba)
 
 .btn-orange
-	@include button-default($orange, $font-color-black, $orange-hover, $orange-border-hover, $orange-active, $orange-border-hover, $orange-disabled, $orange-shadow-rgba)
+	@include button-default($orange, $font-color-dark, $orange-hover, $orange-border-hover, $orange-active, $orange-border-hover, $orange-disabled, $orange-shadow-rgba)
 
 .btn-outline-orange
-	@include button-outline($orange, $font-color-black, $orange-hover, $orange-disabled, $orange-shadow-rgba)
+	@include button-outline($orange, $font-color-dark, $orange-hover, $orange-disabled, $orange-shadow-rgba)
 
 .btn-cyan
-	@include button-default($cyan, $font-color-black, $cyan-hover, $cyan-border-hover, $cyan-border-hover, $cyan-active, $cyan-disabled, $cyan-shadow-rgba)
+	@include button-default($cyan, $font-color-dark, $cyan-hover, $cyan-border-hover, $cyan-border-hover, $cyan-active, $cyan-disabled, $cyan-shadow-rgba)
 
 .btn-outline-cyan
-	@include button-outline($cyan, $font-color-black, $cyan-hover, $cyan-disabled, $cyan-shadow-rgba)
+	@include button-outline($cyan, $font-color-dark, $cyan-hover, $cyan-disabled, $cyan-shadow-rgba)
 
 .btn-light
-	@include button-default($light, $font-color-black, $light-hover, $light-border-hover, $light-border-hover, $light-border-active, $light, $light-shadow-rgba)
+	@include button-default($light, $font-color-dark, $light-hover, $light-border-hover, $light-border-hover, $light-border-active, $light, $light-shadow-rgba)
 	&:disabled
-		color: $font-color-black
+		color: $font-color-dark
 
 .radio
 	@include radio
