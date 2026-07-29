@@ -2,6 +2,7 @@ import { type Metadata } from 'next';
 import { ProviderTheme } from '../custom';
 import { mPlusRounded1c, sourceSans3, ubuntuMono } from '../fonts';
 import { SpeedInsights } from '@vercel/speed-insights/next';
+import { Analytics } from '@vercel/analytics/next';
 import '../styles/global.css';
 
 export const metadata: Metadata = {
@@ -22,6 +23,7 @@ export default function LayoutRoot({
 			<body suppressHydrationWarning>
 				<ProviderTheme>{children}</ProviderTheme>
 				<SpeedInsights />
+				<Analytics />
 			</body>
 		</html>
 	);
