@@ -7,6 +7,10 @@ end_of_line = unset
 trim_trailing_whitespace = true
 indent_brace_style = K&R
 
+[*.{css,sass,scss}]
+quote_type = double
+end_of_line = lf
+
 [*.{ts,tsx,js,jsx}]
 tab_width = 2
 indent_style = tab

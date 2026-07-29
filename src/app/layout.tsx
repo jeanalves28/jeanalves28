@@ -1,21 +1,28 @@
-import { Roboto } from 'next/font/google';
 import { type Metadata } from 'next';
-import '../styles/tailwind.css';
-
-const roboto = Roboto({ subsets: ['latin'], weight: '400' });
+import { ProviderTheme } from '../custom';
+import { mPlusRounded1c, sourceSans3, ubuntuMono } from '../fonts';
+import { SpeedInsights } from '@vercel/speed-insights/next';
+import '../styles/global.css';
 
 export const metadata: Metadata = {
-	title: 'Portfolio',
+	title: 'Portfolio do Jean',
+	icons: 'man_technologist.ico',
 };
 
-export default function RootLayout({
+export default function LayoutRoot({
 	children,
 }: {
 	children: React.ReactNode;
 }) {
 	return (
-		<html lang="pt-br">
-			<body className={roboto.className}>{children}</body>
+		<html
+			lang="pt-br"
+			className={`${ubuntuMono.variable} ${sourceSans3.variable} ${mPlusRounded1c.variable}`}
+		>
+			<body suppressHydrationWarning>
+				<ProviderTheme>{children}</ProviderTheme>
+				<SpeedInsights />
+			</body>
 		</html>
 	);
 }

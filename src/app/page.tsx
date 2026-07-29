@@ -1,3 +1,18 @@
+import { Background, Footer, Header } from '../components';
+import { ProviderNavMenuDropBox } from '../custom';
+import Home from './Home';
+
 export default function Page() {
-	return <h1 className="text-center">Hello Next 14!</h1>;
+	return (
+		<ProviderNavMenuDropBox>
+			<div className="relative min-h-dvh">
+				<Background />
+				<Header />
+				<main className="flex justify-center pt-30">
+					<Home />
+				</main>
+				<Footer />
+			</div>
+		</ProviderNavMenuDropBox>
+	);
 }
