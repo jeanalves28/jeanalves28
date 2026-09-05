@@ -1,0 +1,29 @@
+export { default as Footer } from './footer';
+
+export { default as Header } from './header';
+
+export { default as Button } from './button';
+
+export { default as Image } from './image';
+
+export { default as Title } from './title';
+
+export { default as Text } from './text';
+
+export { default as Input } from './input';
+
+export { default as Modal } from './modal';
+
+export { default as List } from './list';
+
+export { default as Link } from './link';
+
+export { default as Textarea } from './textarea';
+
+export { default as ProjectCard } from './projectCard';
+
+export { default as BoxError } from './boxError';
+
+export { default as Background } from './background';
+
+export { default as SmoothScroll } from './smoothScroll';
