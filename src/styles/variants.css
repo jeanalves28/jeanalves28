@@ -1,0 +1,5 @@
+@custom-variant mobile {
+  @media (hover: none) and (pointer: coarse) {
+    @slot;
+  }
+}
